@@ -1,16 +1,12 @@
-% How much caffeine is there in the jar?
-
-% n - number of days
-% x - fraction of caffeinated 
 
 %r= 0.1 %r1
-r=2.5
-K =0.6 %K
+r=2.5; % per capita growth rate
+K =0.6; %K
 
 %(1,:) = [0 0.1 0.3 0.5 0.7];%initial conditions
 
 %y = x(n) + r(1-x(n)/K)x(n)
-nMax = 60; % max number of days to simulate
+nMax = 1000; % max number of days to simulate
 
 x = zeros(1,nMax); % number of rabbits
 x(1) = 0.2; % initial condition1
