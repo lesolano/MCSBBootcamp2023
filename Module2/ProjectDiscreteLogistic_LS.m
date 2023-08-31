@@ -1,6 +1,6 @@
 
 %r= 0.1 %r1
-r=2.5; % per capita growth rate
+%r=2.5; % per capita growth rate
 K =0.6; %K
 
 %(1,:) = [0 0.1 0.3 0.5 0.7];%initial conditions
@@ -12,12 +12,40 @@ x = zeros(1,nMax); % number of rabbits
 x(1) = 0.2; % initial condition1
 %x(1) = 2; % initial condition 2
 
-for n=2:nMax
+% Define the number of values
+num_values = 1000;
+
+% Define the range for R
+R_min = 0;
+R_max = 3;
+
+% Create a linearly spaced vector for R
+R_values = linspace(R_min, R_max, num_values);
+
+% Initialize a loop to iterate through R_values
+for i = 1:num_values
+    R = R_values(i);
     
-    x(n) = x(n-1) + r*(1-x(n-1)/K)*x(n-1);
-  
-    
-end % finished loop through days
+    for n=2:nMax
+        x(n) = x(n-1) + r*(1-x(n-1)/K)*x(n-1);
+
+    end % finished loop through days
+end
+In this code:
+
+num_values specifies the number of values you want between 0 and 3.
+R_min and R_max define the range for the variable R.
+linspace is used to create a vector R_values with num_values equally spaced values between R_min and R_max.
+The for loop iterates through each value of R in R_values, allowing you to perform calculations or operations with R inside the loop.
+You can replace the comment % Your code here with your specific calculations or operations involving the variable R.
+
+
+
+
+
+
+
+
 
 % THE MODEL ^
 % ------------------------------------------
