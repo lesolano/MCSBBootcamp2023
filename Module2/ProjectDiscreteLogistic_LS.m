@@ -31,21 +31,6 @@ for i = 1:num_values
 
     end % finished loop through days
 end
-In this code:
-
-num_values specifies the number of values you want between 0 and 3.
-R_min and R_max define the range for the variable R.
-linspace is used to create a vector R_values with num_values equally spaced values between R_min and R_max.
-The for loop iterates through each value of R in R_values, allowing you to perform calculations or operations with R inside the loop.
-You can replace the comment % Your code here with your specific calculations or operations involving the variable R.
-
-
-
-
-
-
-
-
 
 % THE MODEL ^
 % ------------------------------------------
